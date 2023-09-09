@@ -1,0 +1,17 @@
+GITHUBUSERSLexer.g4
+GITHUBUSERSParser.g4
+
+make.sh
+
+node_modules/
+
+package-lock.json
+*.interp
+*.tokens
+
+test/
+spec/
+__tests__/
+
+*.log
+*.tsbuildinfo
