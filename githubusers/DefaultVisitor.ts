@@ -1,6 +1,6 @@
 import { AbstractParseTreeVisitor } from 'antlr4ts/tree';
-import { GITHUBUSERSParserVisitor } from './GITHUBUSERSParserVisitor';
-import { EntryContext, FileContext } from './GITHUBUSERSParser';
+import { FileContext, EntryContext } from './parsers/GITHUBUSERSParser';
+import { GITHUBUSERSParserVisitor } from './parsers/GITHUBUSERSParserVisitor';
 
 export class DefaultVisitor extends AbstractParseTreeVisitor<void> implements GITHUBUSERSParserVisitor<void> {
     private emailAddresses: Set<string>;

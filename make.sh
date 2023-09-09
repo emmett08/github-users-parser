@@ -4,7 +4,7 @@ set -e
 
 # npm test
 
-npm run co:build
+npm run gh:build
 
 # npm token create --read-only
 

@@ -1,7 +1,13 @@
 import { CharStreams, CommonTokenStream } from "antlr4ts";
-import { GITHUBUSERSLexer } from "./GITHUBUSERSLexer";
-import { GITHUBUSERSParser, FileContext } from "./GITHUBUSERSParser";
-import { DefaultVisitor } from "./githubusers_visitor";
+import { DefaultVisitor } from "./DefaultVisitor";
+import { GITHUBUSERSLexer } from "./parsers/GITHUBUSERSLexer";
+import { GITHUBUSERSParser, FileContext } from "./parsers/GITHUBUSERSParser";
+
+export * from './parsers/GITHUBUSERSLexer';
+export * from './parsers/GITHUBUSERSParser';
+export * from './parsers/GITHUBUSERSParserListener';
+export * from './parsers/GITHUBUSERSParserVisitor';
+export * from './DefaultVisitor';
 
 export const GetGitHubHandlesByEmail = (input: string, emailAddresses: string[]): string[] => {
     const chars = CharStreams.fromString(input);
